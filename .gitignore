@@ -1,0 +1,11 @@
+# Mac
+.DS_Store
+
+# temp
+qdata
+
+# vagrant
+.vagrant
+*.log
+
+*node_modules*
