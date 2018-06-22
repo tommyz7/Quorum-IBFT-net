@@ -32,12 +32,13 @@ cp build/bin/geth /usr/local/bin
 cp build/bin/bootnode /usr/local/bin
 popd >/dev/null
 
-# copy the network
+# copy the network and the sample
 cp -r /vagrant/network /home/vagrant/
-chown -R vagrant:vagrant /home/vagrant/quorum /home/vagrant/network
+cp -r /vagrant/sample-node /home/vagrant/
+cp -r /vagrant/sample-web /home/vagrant/
+chown -R vagrant:vagrant /home/vagrant/quorum /home/vagrant/network /home/vagrant/sample-web /home/vagrant/sample-node
 
 # done!
-cd network
 echo
 echo 'The Quorum vagrant instance has been provisioned.'
 echo "Use 'vagrant ssh' to open a terminal, 'vagrant suspend' to stop the instance,"
